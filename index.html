@@ -5,9 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- LINK CSS -->
     <link rel="stylesheet" href="./public/css/app.css">
-    <title>Document</title>
+    <title>To Do List</title>
 </head>
 <body>
+    <!-- TO DO LIST AREA -->
+    <div id="bigdiv" class="py-5">
+        <!-- INPUT + BUTTON -->
+        <div id="inputetbtn">
+            <input type="text" placeholder="Votre tâche ?" id="input">
+            <button id="btnadd"><span>+</span> Add</button>
+        </div>
+        <!-- TITRE -->
+        <div id="divtitre">
+            <h1 id="malisttitre">Ma To Do List</h1>
+        </div>
+
+        <!-- TACHES WINDOW -->
+        <div>
+            <!-- 3 BOUTONS -->
+            <div id="divtroisbtn">
+                <button id="btntermine" class="py-2 mx-3">Terminé</button>
+                <button id="btnafaire" class="py-2 mx-3">A faire</button>
+                <button id="btntout" class="py-2 mx-3">Tout</button>
+            </div>
+            <!-- TACHES LISTE -->
+            <div id="divtachesliste">
+                <!-- 1 TACHE -->
+                <div id="divtache1">
+                    <div id="tachename">
+                        <p>Tache 1</p>
+                    </div>
+                    <div id="threebuttons">
+                        <button id="btncheck"><i class="fas fa-check-circle"></i></button>
+                        <button id="btnedit"><i class="fas fa-save"></i></button>
+                        <button id="btntrash"><i class="fas fa-trash-alt"></i></button>
+                    </div>
+                </div>
+            </div>
+            <!-- CLEAR BTN -->
+            <div id="divclear">
+                <button id="btnclear">Clear list</button>
+            </div>
+        </div>
+
+    </div>
     
     <script type="module" src="./public/js/main.js"></script>
 </body>

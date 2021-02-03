@@ -15808,3 +15808,122 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6;
   }
 }
+
+#bigdiv {
+  background-color: #f0efef;
+  width: 80%;
+  text-align: center;
+  margin: auto;
+}
+
+#inputetbtn {
+  padding-bottom: 20px;
+}
+
+#input {
+  width: 50%;
+}
+
+#btnadd {
+  background-color: #f0efef;
+  border: solid 2px blue;
+  border-radius: 5px;
+  color: blue;
+  width: 10%;
+}
+
+#btnadd span {
+  font-weight: bold;
+}
+
+#divtitre {
+  border: #c2c0c0 2px solid;
+  border-radius: 5px;
+  width: 80%;
+  margin: auto;
+  padding-top: 10px;
+  margin-bottom: 20px;
+}
+
+#divtitre h1 {
+  color: blue;
+  font-weight: bold;
+}
+
+#divtroisbtn {
+  margin-bottom: 20px;
+}
+
+#divtroisbtn #btntermine {
+  background-color: blue;
+  border: blue;
+  border-radius: 5px;
+  color: white;
+  width: 10%;
+}
+
+#divtroisbtn #btnafaire {
+  background-color: blue;
+  border: blue;
+  border-radius: 5px;
+  color: white;
+  width: 10%;
+}
+
+#divtroisbtn #btntout {
+  background-color: blue;
+  border: blue;
+  border-radius: 5px;
+  color: white;
+  width: 10%;
+}
+
+#divtachesliste {
+  padding-bottom: 30px;
+}
+
+#divtache1 {
+  display: flex;
+  text-align: center;
+  margin: auto;
+  width: 80%;
+  justify-content: space-between;
+  background-color: white;
+  padding-bottom: 0;
+}
+
+#divtache1 #threebuttons #btncheck {
+  background-color: blue;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  border: 0;
+}
+
+#divtache1 #threebuttons #btnedit {
+  background-color: green;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  border: 0;
+}
+
+#divtache1 #threebuttons #btntrash {
+  background-color: red;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  border: 0;
+}
+
+#btnclear {
+  color: white;
+  background-color: red;
+  width: 40%;
+  border: 0;
+  border-radius: 5px;
+  height: 40px;
+}
