@@ -62,7 +62,7 @@
 #divtachesliste
     padding-bottom: 30px
 
-.divtache
+.todo // divtache
     display: flex
     text-align: center
     margin: auto
@@ -70,29 +70,37 @@
     justify-content: space-between
     background-color: white
     padding-bottom: 0
-    display: none
-    #threebuttons
-        #btncheck
+    border-radius: 5px
+    // transition: all 0.5s ease
+    // display: none
+    .todo-item
+        color: black
+    .threebuttons
+        display: flex
+        justify-content: space-between
+        .complete-button // #btncheck
             background-color: blue
             color: white
             width: 40px
             height: 40px
             border-radius: 5px
             border: 0
-        #btnedit
+        .edit-button // #btnedit
             background-color: green
             color: white
             width: 40px
             height: 40px
             border-radius: 5px
             border: 0
-        #btntrash
+        .trash-button // #btntrash
             background-color: red
             color: white
             width: 40px
             height: 40px
             border-radius: 5px
             border: 0
+
+// #threebuttons
 
 // CLEAR BUTTON
 
