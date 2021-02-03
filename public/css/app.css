@@ -15820,7 +15820,7 @@ a.text-dark:hover, a.text-dark:focus {
   padding-bottom: 20px;
 }
 
-#input {
+#inputbox {
   width: 50%;
 }
 
@@ -15882,7 +15882,7 @@ a.text-dark:hover, a.text-dark:focus {
   padding-bottom: 30px;
 }
 
-#divtache1 {
+.divtache {
   display: flex;
   text-align: center;
   margin: auto;
@@ -15890,9 +15890,10 @@ a.text-dark:hover, a.text-dark:focus {
   justify-content: space-between;
   background-color: white;
   padding-bottom: 0;
+  display: none;
 }
 
-#divtache1 #threebuttons #btncheck {
+.divtache #threebuttons #btncheck {
   background-color: blue;
   color: white;
   width: 40px;
@@ -15901,7 +15902,7 @@ a.text-dark:hover, a.text-dark:focus {
   border: 0;
 }
 
-#divtache1 #threebuttons #btnedit {
+.divtache #threebuttons #btnedit {
   background-color: green;
   color: white;
   width: 40px;
@@ -15910,7 +15911,7 @@ a.text-dark:hover, a.text-dark:focus {
   border: 0;
 }
 
-#divtache1 #threebuttons #btntrash {
+.divtache #threebuttons #btntrash {
   background-color: red;
   color: white;
   width: 40px;
