@@ -10,6 +10,8 @@ let termineBtn = document.querySelector("#btntermine")
 let afaireBtn = document.querySelector("#btnafaire")
 let toutBtn = document.querySelector("#btntout")
 
+let btnDark = document.querySelector("#btn-darkmode")
+
 // CLICK ADD
 
 addBtn.addEventListener('click', addTodo)
@@ -38,6 +40,8 @@ boutonClear.addEventListener('click', clearList)
 // MENUS
 
 termineBtn.addEventListener('click', termineMenu)
+afaireBtn.addEventListener('click', afaireMenu)
+toutBtn.addEventListener('click', toutMenu)
 
 // FONCTION ADD TACHE
 
@@ -154,9 +158,42 @@ function clearList(e) {
 
 function termineMenu(e) {
     // classes sans "completed" : display-none
-    e.target 
+    let tabNode = divParent.children
+    var tab = Array.from(tabNode)
+    tab.forEach(element => {
+        element.classList.remove("none")
+        if (element.classList == "todo completed") {
+
+        } else {
+            element.classList.add("none")
+        }
+    });
 }
 
+// MENU A FAIRE
+
+function afaireMenu(e) {
+    let tabNode = divParent.children
+    var tab = Array.from(tabNode)
+    tab.forEach(element => {
+        element.classList.remove("none")
+        if (element.classList == "todo") {
+
+        } else {
+            element.classList.add("none")
+        }
+    });
+}
+
+// MENU TOUT
+
+function toutMenu(e) {
+    let tabNode = divParent.children
+    var tab = Array.from(tabNode)
+    tab.forEach(element => {
+        element.classList.remove("none")
+    });
+}
 
 
 // FONCTION DARK MODE
@@ -169,5 +206,17 @@ function termineMenu(e) {
 //     html.style.filter = "invert(100%)";
 // };
 
+// dark mode
+// let html = document.querySelector('html')
+
+// btnDark.addEventListener('click',
+//     html.style.filter = "invert(100%)")
+
+let darkmodeapp = () => {
+    let html = document.querySelector('html')  
+    btnDark.addEventListener('click', html.style.filter = "invert(100%)")
+}
+
+btnDark.addEventListener('click', darkmodeapp)
 
 
