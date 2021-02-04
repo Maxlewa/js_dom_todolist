@@ -15953,3 +15953,13 @@ a.text-dark:hover, a.text-dark:focus {
   color: white;
   text-decoration: line-through;
 }
+
+#btn-darkmode {
+  color: white;
+  background-color: black;
+  width: 40%;
+  border: 0;
+  border-radius: 5px;
+  height: 40px;
+  margin-top: 20px;
+}

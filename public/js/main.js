@@ -10,7 +10,6 @@ let termineBtn = document.querySelector("#btntermine")
 let afaireBtn = document.querySelector("#btnafaire")
 let toutBtn = document.querySelector("#btntout")
 
-
 // CLICK ADD
 
 addBtn.addEventListener('click', addTodo)
@@ -23,9 +22,13 @@ inputUser.addEventListener('keyup', (e) => {
     }
 })
 
-// SUPPRIMER UNE TACHE
+// SUPPRIMER OU MODIFIER UNE TACHE
 
 divParent.addEventListener('click', deleteCheck)
+
+// EDIT LA TACHE
+
+divParent.addEventListener('click', editToDo)
 
 // CLEAR LIST
 
@@ -38,6 +41,8 @@ afaireBtn.addEventListener('click', filterTodo)
 toutBtn.addEventListener('click', filterTodo)
 
 // FONCTION ADD TACHE
+
+
 
 function addTodo(event) {
     event.preventDefault();
@@ -81,7 +86,7 @@ function addTodo(event) {
     inputUser.value = ""
 }
 
-// FONCTION SUPPRIMER TACHE + MODIF + COMPLETED
+// FONCTION SUPPRIMER TACHE + COMPLETED
 
 function deleteCheck(e) {
     const item = e.target
@@ -99,10 +104,25 @@ function deleteCheck(e) {
         const parentParent = todo.parentElement;
         parentParent.classList.toggle("completed")
     }
+}
 
-    // modif
-    if (item.classList[0] === "edit-button") {
-        
+// FONCTION EDIT 
+
+function editToDo(e) {
+    let item = e.target
+    if (item.classList[0] === "todo-text") {
+        let texte = item.innerText
+        let inputTexte = document.createElement("input") 
+        inputTexte.type = "text"
+        inputTexte.value = texte
+        item.innerText = ""
+        item.appendChild(inputTexte)
+        item.addEventListener('keyup', (e) => {
+            if (e.keyCode ===  13) {
+                let newTexte = inputTexte.value
+                item.innerText = newTexte
+            }
+        })
     }
 }
 
@@ -113,33 +133,7 @@ function clearList(e) {
     document.getElementById(e).innerHTML = "";
 }
 
-// FONCTION FILTER
-
-// function filterTodo (e) {
-//     const todos = divParent.children
-//     todos.forEach(function (todo) {
-//         switch (e.target.value) {
-//             case "all":
-//                 todo.style.display = "flex"
-//                 break;
-        
-//             case "completed":
-//                 if (todo.classList.contains("completed")) {
-//                     todo.style.display = "flex"
-//                 } else {
-//                     todo.style.display = "none"
-//                 }
-//                 break;
-//             case "uncompleted":
-//                 if (!todo.classList.contains("completed")) {
-//                     todo.style.display = "flex"
-//                 } else {
-//                     todo.style.display = "none"
-//                 }
-//                 break;
-//         }
-//     })
-// }
+// MENUS
 
 function termineMenu (e) {
     e = "divtachesliste"
@@ -152,4 +146,6 @@ function termineMenu (e) {
         }
     })
 }
+
+
 
