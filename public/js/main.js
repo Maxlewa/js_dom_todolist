@@ -29,6 +29,7 @@ divParent.addEventListener('click', deleteCheck)
 // EDIT LA TACHE
 
 divParent.addEventListener('click', editToDo)
+divParent.addEventListener('click', editToDoButton)
 
 // CLEAR LIST
 
@@ -37,12 +38,8 @@ boutonClear.addEventListener('click', clearList)
 // MENUS
 
 termineBtn.addEventListener('click', termineMenu)
-afaireBtn.addEventListener('click', filterTodo)
-toutBtn.addEventListener('click', filterTodo)
 
 // FONCTION ADD TACHE
-
-
 
 function addTodo(event) {
     event.preventDefault();
@@ -106,11 +103,11 @@ function deleteCheck(e) {
     }
 }
 
-// FONCTION EDIT 
+// FONCTION EDIT CLIC SUR TEXTE
 
 function editToDo(e) {
     let item = e.target
-    if (item.classList[0] === "todo-text") {
+    if (item.classList[0] === "todo-item") {
         let texte = item.innerText
         let inputTexte = document.createElement("input") 
         inputTexte.type = "text"
@@ -126,6 +123,26 @@ function editToDo(e) {
     }
 }
 
+// FONCTION EDIT CLIC SUR ICONE
+
+function editToDoButton(e) {
+    let item = e.target
+    if (item.classList[0] === "edit-button") {
+        let leTexte = item.parentElement.previousSibling
+        let inputTexte2 = document.createElement("input") 
+        inputTexte2.type = "text"
+        inputTexte2.value = leTexte.innerText
+        leTexte.innerText= ""
+        leTexte.appendChild(inputTexte2)
+        leTexte.addEventListener('keyup', (e) => {
+            if (e.keyCode ===  13) {
+                let newTexte = inputTexte2.value
+                leTexte.innerText = newTexte
+            }
+        })
+    }
+}    
+
 // FONCTION CLEAR LIST
 
 function clearList(e) {
@@ -133,19 +150,24 @@ function clearList(e) {
     document.getElementById(e).innerHTML = "";
 }
 
-// MENUS
+// MENU TERMINE - COMPLETED
 
-function termineMenu (e) {
-    e = "divtachesliste"
-    const todos = divParent.childNodes
-    todos.forEach(function (todo) {
-        if (todo.classList.contains("completed")) {
-            todo.style.display = "flex"
-        } else {
-            todo.style.display = "none"
-        }
-    })
+function termineMenu(e) {
+    // classes sans "completed" : display-none
+    e.target 
 }
+
+
+
+// FONCTION DARK MODE
+
+// let darkMode = document.querySelector('html')
+// document.getElementById('btn-darkmode').addEventListener('click', darkMode)
+
+// function darkMode() {
+
+//     html.style.filter = "invert(100%)";
+// };
 
 
 

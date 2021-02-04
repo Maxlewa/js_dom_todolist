@@ -15944,6 +15944,10 @@ a.text-dark:hover, a.text-dark:focus {
   pointer-events: none;
 }
 
+.fa-save {
+  pointer-events: none;
+}
+
 .completed {
   background-color: #1e53ff;
   opacity: 60%;
