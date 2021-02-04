@@ -5,19 +5,20 @@ let tacheLigne = document.querySelector(".divtache")
 
 let divParent = document.querySelector("#divtachesliste")
 
-// inputUser.addEventListener('keyup', (e) => {
-//     if (e.keyCode === 13) {
-//         tacheMot.innerText = inputUser.value
-//         tacheLigne.style.display = 'flex'
-//     }
-// })
 
-// addBtn.addEventListener('click', () => {
-//     tacheMot.innerText = inputUser.value
-//     tacheLigne.style.display = 'flex'
-// })
+// CLICK ADD
 
 addBtn.addEventListener('click', addTodo)
+
+// ENTER
+
+inputUser.addEventListener('keyup', (e) => {
+    if (e.keyCode === 13) {
+        addTodo(e)
+    }
+})
+
+// LA FONCTION
 
 function addTodo(event) {
     event.preventDefault();
@@ -25,6 +26,7 @@ function addTodo(event) {
     // créer la div
     const todoDiv = document.createElement("div")
     todoDiv.classList.add("todo")
+    divParent.appendChild(todoDiv)
 
     // créer un p
     const newTodo = document.createElement("p")
