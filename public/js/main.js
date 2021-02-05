@@ -204,4 +204,11 @@ let darkmodeapp = () => {
 
 btnDark.addEventListener('click', darkmodeapp)
 
-
+// let darkmodeapp = () => {
+//     let html = document.querySelector('html')  
+//     btnDark.addEventListener('click', 
+    
+//     function inversion () {
+//         html.toggleAttribute('style', 'filter: invert(100%)')
+//     })
+// }
