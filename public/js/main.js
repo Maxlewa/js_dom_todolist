@@ -83,7 +83,7 @@ function addTodo(event) {
     threebuttonsDiv.appendChild(trashButton)
 
     // AJOUTER TACHE A LA TO DO LIST
-    divParent.appendChild(todoDiv)
+    // divParent.appendChild(todoDiv)
     inputUser.value = ""
 }
 
@@ -195,22 +195,7 @@ function toutMenu(e) {
     });
 }
 
-
 // FONCTION DARK MODE
-
-// let darkMode = document.querySelector('html')
-// document.getElementById('btn-darkmode').addEventListener('click', darkMode)
-
-// function darkMode() {
-
-//     html.style.filter = "invert(100%)";
-// };
-
-// dark mode
-// let html = document.querySelector('html')
-
-// btnDark.addEventListener('click',
-//     html.style.filter = "invert(100%)")
 
 let darkmodeapp = () => {
     let html = document.querySelector('html')  
